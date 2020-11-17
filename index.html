@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Musiq Chat</title> 
+</head>
+<body>
+    <!-- container & title -->
+    <div class="container my-4">
+        <h1 class="my-4 text-center"> Musiq Chat</h1>
+    
+    <!-- buttons for chat rooms -->
+    <div class="chatrooms mb-3 text-center">
+        <div class="my-2">Choose a chatroom</div>
+        <button class="btn" id="hiphop">#Hip_hop</button>
+        <button class="btn" id="house">#House</button>
+        <button class="btn" id="rnb">#RnB</button>
+        <button class="btn" id="rap">#Jazz</button>
+    </div>
+
+    <!-- chat window -->
+    <div class="chat-window">
+        <ul class="chat-list list-group"></ul>
+    </div>
+
+    <!-- new chat form -->
+    <form class="new-chat my-3" autocomplete="off">
+        <div class="input-group">
+            <div class="input-group-prepend"> 
+                <div class="input-group-text"> Your message</div>
+            </div>
+            <input type="text" id="message" class="form-control" required>
+            <div class="input-group-append">
+                <input type="submit" class="btn" value="send">
+            </div>
+        </div> 
+    </form>
+
+    <!-- update name form -->
+    <form class="new-name my-3" auto complete="off">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text">Update name</div>
+            </div>
+            <input type="text" id="name" class="form-control" required>
+            <div class="input-group-append">
+                <input type="submit" class="btn" value="update">
+            </div>
+        </div>
+    </form>
+
+    <div class="update-mssg"></div>
+
+    </div>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-firestore.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAJ344qi4JWydzWiFoz8OJfmLXrD-btD6I",
+    authDomain: "exploring-firebase-97510.firebaseapp.com",
+    databaseURL: "https://exploring-firebase-97510.firebaseio.com",
+    projectId: "exploring-firebase-97510",
+    storageBucket: "exploring-firebase-97510.appspot.com",
+    messagingSenderId: "442353285645",
+    appId: "1:442353285645:web:3de91ab18e6327e84fb344"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore()    
+</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.30.1/date_fns.min.js"></script>
+    <script src="Scripts/chat.js"></script>
+    <script src="Scripts/ui.js"></script>
+    <script src="Scripts/app.js"></script>
+</body>
+</html>
